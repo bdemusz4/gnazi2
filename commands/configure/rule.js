@@ -7,7 +7,7 @@ module.exports = class RuleCommand extends Command {
             name: 'rule',
             group: 'configure',
             memberName: 'rule',
-            description: 'Add rules to a list of disabled rules that the bot will ignore',
+            description: 'Add rules to a list of disabled rules that the bot will ignore.\n You can find a list of rules here https://community.languagetool.org/rule/list?lang=en, then use the rule name, i.e. SENTENCE_WHITESPACE',
             examples: ['rule add UpperCaseSentenceStart', 'user remove BadWords'],
             args: [
                 {
@@ -21,7 +21,7 @@ module.exports = class RuleCommand extends Command {
                 },
                 {
                     key: 'ruleName',
-                    prompt: 'Which rule would you like to add or remove from the list of disabled rules?',
+                    prompt: 'Which rule would you like to add or remove from the list of disabled rules? To see a list of rules visit https://community.languagetool.org/rule/list?lang=en and then use the rule name, i.e. SENTENCE_WHITESPACE',
                     type: 'string'
                 }
             ]
